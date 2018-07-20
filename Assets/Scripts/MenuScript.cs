@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
 
@@ -23,7 +24,8 @@ public class MenuScript : MonoBehaviour {
 	         		buttonWidth, buttonHeight),
 			"Start!")) 
 		{
-			Application.LoadLevel("Level1");
-		}
+			// Application.LoadLevel("Level1");
+            SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        }
 	}
 }
