@@ -13,16 +13,16 @@ public class MenuScript : MonoBehaviour {
 
 	void OnGUI()
 	{
-		const int buttonWidth = 84;
-		const int buttonHeight = 60;
+		const int buttonWidth = 600;
+		const int buttonHeight = 200;
 
 		GUI.skin = newSkin;
 
 		if (GUI.Button (
 			new Rect (Screen.width / 2 - (buttonWidth / 2), 
-		         	(2 * Screen.height / 2.5f) - (buttonWidth / 2),
+		         	(2 * Screen.height / 2.2f) - (buttonWidth / 2),
 	         		buttonWidth, buttonHeight),
-			"Start!")) 
+			"Engage")) 
 		{
             // Application.LoadLevel("Level1");
             // ButtonClickSound();

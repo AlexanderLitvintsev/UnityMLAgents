@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\ShotScript.cs" />
     <Compile Include="Assets\Scripts\SoundEffectScript.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemy.cs" />
+    <Compile Include="Assets\Scripts\SpawnPlanets.cs" />
     <Compile Include="Assets\Scripts\SpecialEffectScript.cs" />
     <Compile Include="Assets\Scripts\WeaponScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -13,15 +13,15 @@ public class GameOverScript : MonoBehaviour {
 	
 	void OnGUI()
 	{
-		const int buttonWidth = 120;
-		const int buttonHeight = 60;
+		const int buttonWidth = 600;
+		const int buttonHeight = 200;
 		
 		GUI.skin = newSkin;
 
 		// Restart
 		if (GUI.Button (
 			new Rect (Screen.width / 2 - (buttonWidth / 2), 
-		          (2 * Screen.height / 4) - (buttonWidth / 2),
+		          (2 * Screen.height / 3.6f) - (buttonWidth / 2),
 		          buttonWidth, buttonHeight),
 			"Retry")) 
 		{
