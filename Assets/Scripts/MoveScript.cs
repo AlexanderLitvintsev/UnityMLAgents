@@ -8,7 +8,7 @@ public class MoveScript : MonoBehaviour {
 
 	private Vector2 movement;
 
-	public Vector2 direction = new Vector2 (-1, 0);
+	public Vector2 direction = new Vector2 (1, 0);
 
 	// Update is called once per frame
 	void Update () {

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class ScrollingScript : MonoBehaviour {
 
 	public Vector2 speed = new Vector2(1, 1);
-	public Vector2 direction = new Vector2(-1, 0);
+	public Vector2 direction = new Vector2(0, -1);
 	public bool isLooping = false;
 	private List<Transform> backgroundPart;
 
@@ -27,7 +27,7 @@ public class ScrollingScript : MonoBehaviour {
 			}
 
 			backgroundPart = backgroundPart
-				.OrderBy(t => t.position.x).ToList();
+				.OrderBy(t => t.position.y).ToList();
 		}
 	}
 
@@ -44,7 +44,7 @@ public class ScrollingScript : MonoBehaviour {
 
 			if (firstChild != null)
 			{
-				if (firstChild.position.x < Camera.main.transform.position.x)
+				if (firstChild.position.y < Camera.main.transform.position.y)
 				{
 					if (!firstChild.GetComponent<Renderer>().IsVisibleFrom(Camera.main))
 					{
@@ -56,8 +56,8 @@ public class ScrollingScript : MonoBehaviour {
 
 
 						firstChild.position = new Vector3(
-							lastPosition.x + lastSize.x,
-							firstChild.position.y,
+                            firstChild.position.x,
+                            lastPosition.y + lastSize.y,
 							firstChild.position.z);
 
 						backgroundPart.Remove(firstChild);

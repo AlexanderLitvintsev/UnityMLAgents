@@ -24,14 +24,19 @@ public class SpawnEnemy : MonoBehaviour {
 
 		if (isPositionPlayer && playerTransform != null)
 		{
-			spawnPosition = new Vector3(transform.position.x,
-		                            	playerTransform.position.y,
+			spawnPosition = new Vector3(playerTransform.position.x,
+                                        transform.position.y,
 		                            	transform.position.z);
-		}
+            /*
+            spawnPosition = new Vector3(playerTransform.position.x,
+                                        transform.position.y,
+                                        transform.position.z);
+            */
+        }
 		else
 		{
-			spawnPosition = new Vector3(transform.position.x,
-			                            Random.Range(-4, 4),
+			spawnPosition = new Vector3(Random.Range(-1, 1), 
+                                        transform.position.y,
 			                            transform.position.z);
 		}
 

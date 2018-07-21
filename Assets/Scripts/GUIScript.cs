@@ -15,7 +15,7 @@ public class GUIScript : MonoBehaviour {
 
     void OnGUI()
     {
-
+        /*
         const int buttonWidth = 120;
         const int buttonHeight = 60;
 
@@ -29,6 +29,7 @@ public class GUIScript : MonoBehaviour {
             // Application.LoadLevel("Level1");
             Input.GetAxis("Horizontal");
         }
+        */
 
     }
 
