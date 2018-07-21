@@ -17,8 +17,13 @@ public class HealthScript : MonoBehaviour {
             // Sound of the explosion
             SoundEffectScript.Instance.MakeExplosionSound();
 
+            GUIScript.gameScore += 1;
+
             // Death
             Destroy(gameObject);
-		}
+
+            
+        }
+
 	}
 }

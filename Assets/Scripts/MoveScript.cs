@@ -17,7 +17,10 @@ public class MoveScript : MonoBehaviour {
 		movement = new Vector2 (
 			 direction.x * speed.x,
 			 direction.y * speed.y);
-	}
+
+
+    }
+
 
 	void FixedUpdate() {
         // Object Movement

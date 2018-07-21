@@ -35,7 +35,8 @@ public class SpawnEnemy : MonoBehaviour {
         }
 		else
 		{
-			spawnPosition = new Vector3(Random.Range(-1, 1), 
+
+			spawnPosition = new Vector3(Random.Range(-4, 4), 
                                         transform.position.y,
 			                            transform.position.z);
 		}

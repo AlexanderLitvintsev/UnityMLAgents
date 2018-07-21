@@ -36,7 +36,9 @@ public class EnemyScript : MonoBehaviour {
 			if (canBeDesytroyed)
 			{
 				Destroy(gameObject);
-			}
+
+            }
+
 		}
 	}
 }
