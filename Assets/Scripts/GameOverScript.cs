@@ -25,7 +25,13 @@ public class GameOverScript : MonoBehaviour {
 		          buttonWidth, buttonHeight),
 			"Retry")) 
 		{
-			// Application.LoadLevel("Level1");
+
+            // Button Click Sound
+            SoundEffectScript.Instance.MakeButtonClickSound();
+
+            ClearKillCounter();
+
+            // Application.LoadLevel("Level1");
             SceneManager.LoadScene("Level1", LoadSceneMode.Single);
         }
 
@@ -36,8 +42,19 @@ public class GameOverScript : MonoBehaviour {
 		          buttonWidth, buttonHeight),
 			"Menu")) 
 		{
-			// Application.LoadLevel("Menu");
+            // Button Click Sound
+            SoundEffectScript.Instance.MakeButtonClickSound();
+
+            ClearKillCounter();
+
+            // Application.LoadLevel("Menu");
             SceneManager.LoadScene("Menu", LoadSceneMode.Single);
         }
 	}
+
+    void ClearKillCounter()
+    {
+        // Kills = 0
+        GUIScript.gameScore = 0;
+    }
 }

@@ -7,8 +7,10 @@ public class SoundEffectScript : MonoBehaviour {
 	public AudioClip explosionSound;
 	public AudioClip playerShotSound;
 	public AudioClip enemyShotSound;
+    public AudioClip buttonClickSound;
+    public AudioClip lostGameSound;
 
-	void Awake()
+    void Awake()
 	{
 		if (Instance != null)
 		{
@@ -33,7 +35,17 @@ public class SoundEffectScript : MonoBehaviour {
 		MakeSound (enemyShotSound);
 	}
 
-	private void MakeSound(AudioClip originalClip)
+    public void MakeButtonClickSound()
+    {
+        MakeSound(buttonClickSound);
+    }
+
+    public void MakeLostGameSound()
+    {
+        MakeSound(lostGameSound);
+    }
+
+    private void MakeSound(AudioClip originalClip)
 	{
 		AudioSource.PlayClipAtPoint (originalClip, transform.position);
 	}

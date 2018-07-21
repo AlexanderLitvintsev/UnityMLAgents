@@ -91,6 +91,13 @@ public class PlayerScript : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		transform.parent.gameObject.AddComponent<GameOverScript> ();
+
+
+        // Lost Game Sound
+        SoundEffectScript.Instance.MakeLostGameSound();
+
+        //AudioSource.PlayClipAtPoint(originalClip, transform.position);
+
+        transform.parent.gameObject.AddComponent<GameOverScript> ();
 	}
 }

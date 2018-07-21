@@ -12,11 +12,15 @@ public class EnemyMoveScript : MonoBehaviour {
 
     public Vector2 direction = new Vector2(1, 0);
 
+    private static int _frameCount;
+
 
     // Use this for initialization
     void Start () {
-		
-	}
+
+        InvokeRepeating("EnemyRandomDirection", 3.0f, 1.0f);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,13 +30,19 @@ public class EnemyMoveScript : MonoBehaviour {
              direction.x * speed.x,
              direction.y * speed.y);
 
-        if (GameObject.FindGameObjectWithTag("Enemy") == true)
-        {
+
+    }
+
+    void EnemyRandomDirection()
+    {
+        /*
+        if (GetComponent ) {
+
             Vector2 RandomDirection = new Vector2(Random.Range(1f, -1f), Random.Range(0f, -1f));
             direction = RandomDirection;
             Debug.Log("Enemy Random Direction");
         }
-
+        */
     }
 
     void FixedUpdate()

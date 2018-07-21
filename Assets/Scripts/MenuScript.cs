@@ -24,7 +24,8 @@ public class MenuScript : MonoBehaviour {
 	         		buttonWidth, buttonHeight),
 			"Start!")) 
 		{
-			// Application.LoadLevel("Level1");
+            // Application.LoadLevel("Level1");
+            // ButtonClickSound();
             SceneManager.LoadScene("Level1", LoadSceneMode.Single);
         }
 	}
